@@ -6,6 +6,7 @@ const Layout= (props)=> {
     <>
         <Header />
         {props.children}
+        lorem ipsum dolor sit amet, consectetur adip
         
     </>
   )
