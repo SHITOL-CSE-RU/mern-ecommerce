@@ -25,6 +25,7 @@ mongoose.connect(
     });
 
 app.use(bodyParser());
+app.use('/api', authRoutes);
 app.use('/api', adminRoutes);
 
 
