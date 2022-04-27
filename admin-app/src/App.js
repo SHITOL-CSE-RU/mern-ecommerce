@@ -1,13 +1,14 @@
-import React from 'react';
-import './App.css';
-import { Jumbotron } from 'react-bootstrap';
+import React from "react";
+import "./App.css";
+import Layout from "./components/Layout";
+
 
 function App() {
   return (
     <div className="App">
-      <Jumbotron>
-        <h1>Admin Dashboard</h1>
-      </Jumbotron>
+      <Layout>
+     <h1>helloworld</h1>
+     </Layout>
     </div>
   );
 }
