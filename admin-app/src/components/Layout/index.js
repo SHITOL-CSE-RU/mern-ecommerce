@@ -1,13 +1,16 @@
 import React from 'react'
+import { Container } from 'react-bootstrap';
 import Header from "../Header"
 
-const Layout= (props)=> {
+const Layout = (props) => {
   return (
     <>
-        <Header />
+      <Header />
+
+      <Container>
         {props.children}
-        
-        
+      </Container>
+
     </>
   )
 }

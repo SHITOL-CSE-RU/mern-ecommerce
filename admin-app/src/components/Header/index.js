@@ -1,14 +1,15 @@
-import React from 'react'
-import { Navbar, Nav, NavDropdown  } from "react-bootstrap";
+import React from "react";
+import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
 
 function index() {
-  return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-    <Navbar.Brand href="#home">Admin Dashboard</Navbar.Brand>
-    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-    <Navbar.Collapse id="responsive-navbar-nav">
-      <Nav className="me-auto">
-        {/* <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
+    return (
+        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+            <Container>
+                <Navbar.Brand href="#home">Admin Dashboard</Navbar.Brand>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse id="responsive-navbar-nav">
+                    <Nav className="me-auto">
+                        {/* <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
           <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
           <NavDropdown.Item href="#action/3.2">
             Another action
@@ -21,13 +22,14 @@ function index() {
             Separated link
           </NavDropdown.Item>
         </NavDropdown> */}
-      </Nav>
-      <Nav>
-        <Nav.Link href="#deets">Signin</Nav.Link>
-      </Nav>
-    </Navbar.Collapse>
-</Navbar>
-  )
+                    </Nav>
+                    <Nav>
+                        <Nav.Link href="#deets">Signin</Nav.Link>
+                    </Nav>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
+    );
 }
 
-export default index
+export default index;
