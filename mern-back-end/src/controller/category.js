@@ -1,3 +1,6 @@
+const Category = require("../models/category");
+const slugify = require('slugify');
+
 exports.addCategory = (req, res) => {
     const categoryObj = {
         name: req.body.name,
