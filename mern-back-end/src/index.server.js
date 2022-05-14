@@ -1,7 +1,6 @@
 const express = require('express');
 const env = require('dotenv');
 const app = express();
-const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
 //routes
@@ -16,15 +15,15 @@ env.config();
 mongoose.connect(
     `mongodb+srv://${process.env.MONGO_DB_USER}:${process.env.MONGO_DB_PASSWORD}@cluster0.nd3v4.mongodb.net/${process.env.MONGO_DB_DATABASE}?retryWrites=true&w=majority`,
     {
-        useNewUrlParser: true, 
+        useNewUrlParser: true,
         useUnifiedTopology: true
     }
-    ).then(() => {
-        console.log('Database Connected Success');
-    
-    });
+).then(() => {
+    console.log('Database Connected Success');
 
-app.use(bodyParser());
+});
+
+app.use(express.json());
 app.use('/api', authRoutes);
 app.use('/api', adminRoutes);
 

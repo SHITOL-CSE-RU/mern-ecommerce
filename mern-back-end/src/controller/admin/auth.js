@@ -39,7 +39,7 @@ exports.signin = (req, res) => {
           expiresIn: "1h",
         });
         const { _id, firstName, lastName, email, role, fullName } = user;
-        res.status(200).json({ 
+        res.status(200).json({
           token,
           user: {
             _id,
@@ -61,10 +61,3 @@ exports.signin = (req, res) => {
   });
 }
 
-exports.requireSignin = (req, res, next) => {
-  const token =req.headers.authorization.split(' ')[1];
-  const user = jwt.verify(token, process.env.JWT_SECRET);
-  req.user = user;
-  next();
-  //jwt.decode()
-}
