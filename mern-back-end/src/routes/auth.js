@@ -7,7 +7,7 @@ const router = express.Router();
 
 router.post("/signin", signin);
 
-router.post("/signup", validateRequest, isRequestValidated, signup);
+router.post("/signup", validateSignupRequest, isRequestValidated, signup);
 
 // router.post('/profile', requireSignin, (req, res) => {
 //     res.status(200).json({user: 'profile'})

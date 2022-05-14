@@ -1,6 +1,6 @@
 const { check, validationResult } = require("express-validator");
 
-exports.validateRequest = [
+exports.validateSignupRequest = [
     check("firstName").notEmpty().withMessage("First name is required"),
     check("lastName").notEmpty().withMessage("Last name is required"),
     check("email").isEmail().withMessage("Valid Email is required"),
@@ -14,4 +14,5 @@ exports.isRequestValidated = (req, res, next) => {
     if (errors.array().length > 0) {
         return res.status(400).json({ errors: errors.array()[0].msg });
     }
+    next();
 }
